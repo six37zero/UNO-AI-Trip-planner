@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 BREVO - Smart Travel Planner</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>BREVO</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#chat" class="nav-link">AI Chat</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Plan Your Perfect Trip with
+                    <span class="gradient-text">AI Intelligence</span>
+                </h1>
+                <p class="hero-description">
+                    Discover destinations, calculate expenses, check weather, and get personalized travel recommendations 
+                    powered by advanced artificial intelligence.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('chat')">
+                        <i class="fas fa-robot"></i>
+                        Start Planning
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('features')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-plane"></i>
+                    <span>Smart Travel</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>AI Guide</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-calculator"></i>
+                    <span>Budget Planner</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose BREVO?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Planning</h3>
+                    <p>Get intelligent travel recommendations based on your preferences, budget, and travel style.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Smart Budgeting</h3>
+                    <p>Calculate expenses, convert currencies, and plan your budget with precision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Weather Intelligence</h3>
+                    <p>Check weather conditions for your destination to plan the perfect travel dates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Place Discovery</h3>
+                    <p>Find amazing places, attractions, and hidden gems at your destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">Travel Planning Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card" onclick="openTool('weather')">
+                    <div class="tool-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Weather Tool</h3>
+                    <p>Get real-time weather information for any location worldwide.</p>
+                    <div class="tool-action">
+                        <span>Try Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="tool-card" onclick="openTool('currency')">
+                    <div class="tool-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Currency Converter</h3>
+                    <p>Convert between different currencies with live exchange rates.</p>
+                    <div class="tool-action">
+                        <span>Try Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="tool-card" onclick="openTool('calculator')">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Expense Calculator</h3>
+                    <p>Calculate travel expenses and create detailed budgets.</p>
+                    <div class="tool-action">
+                        <span>Try Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="tool-card" onclick="openTool('places')">
+                    <div class="tool-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Place Search</h3>
+                    <p>Discover amazing places and attractions at your destination.</p>
+                    <div class="tool-action">
+                        <span>Try Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Section -->
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <h2 class="section-title">AI Travel Assistant</h2>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-info">
+                        <h3>BREVO AI Assistant</h3>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI travel assistant. I can help you plan trips, find destinations, calculate expenses, and much more. What would you like to know?</p>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <div class="input-container">
+                        <input type="text" id="messageInput" placeholder="Ask me about travel planning..." />
+                        <button id="sendButton" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn" onclick="quickMessage('Plan a trip to Paris')">Paris Trip</button>
+                        <button class="quick-btn" onclick="quickMessage('Calculate travel expenses')">Budget Planning</button>
+                        <button class="quick-btn" onclick="quickMessage('Best time to visit Japan')">Travel Timing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About BREVO</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>BREVO is an intelligent travel planning platform that combines the power of artificial intelligence with comprehensive travel tools. Our mission is to make travel planning effortless, enjoyable, and personalized.</p>
+                    <p>Built with cutting-edge AI technology, BREVO provides smart recommendations, accurate calculations, and real-time information to help you create the perfect travel experience.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Destinations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Happy Travelers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">AI Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BREVO</h3>
+                    <p>Your intelligent travel companion powered by AI.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#features">AI Planning</a></li>
+                        <li><a href="#tools">Travel Tools</a></li>
+                        <li><a href="#chat">AI Assistant</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#" onclick="openTool('weather')">Weather</a></li>
+                        <li><a href="#" onclick="openTool('currency')">Currency</a></li>
+                        <li><a href="#" onclick="openTool('calculator')">Calculator</a></li>
+                        <li><a href="#" onclick="openTool('places')">Places</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@brevo.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Travel City, TC 12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BREVO. All rights reserved. | Built with ❤️ and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tool Modals -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="static/script.js?v=1.0.2"></script>
+</body>
+</html>
